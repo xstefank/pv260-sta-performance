@@ -7,7 +7,7 @@ export PATH=$PATH:$PGSQL_HOME/bin
 export PGDATA=$PGSQL_HOME/data
 export PGDATABASE=postgres
 export PGUSER=postgres
-export PGPORT=5439
+export PGPORT=5432
 export PGLOCALEDIR=$PGSQL_HOME/share/locale
 
 # init DB - uncomment this if you are running this script for the first time
