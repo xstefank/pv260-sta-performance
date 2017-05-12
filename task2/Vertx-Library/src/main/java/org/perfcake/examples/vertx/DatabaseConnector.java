@@ -25,10 +25,11 @@ import javax.persistence.Query;
 public class DatabaseConnector {
 
     private EntityManager entityManager;
+    private EntityManagerFactory entityManagerFactory;
 
     public DatabaseConnector() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("LibraryPU");
-        entityManager = emf.createEntityManager();
+        entityManagerFactory = Persistence.createEntityManagerFactory("LibraryPU");
+        entityManager = entityManagerFactory.createEntityManager();
         System.out.println("Database connection created");
     }
 
@@ -39,6 +40,7 @@ public class DatabaseConnector {
 
     public void closeConnector() {
         this.entityManager.close();
+        this.entityManagerFactory.close();
         System.out.println("Database connection closed");
     }
 
