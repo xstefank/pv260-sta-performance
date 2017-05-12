@@ -2,7 +2,7 @@
 
 echo "Setting environment variables..."
 
-PGSQL_HOME=$(pwd)/pgsql
+PGSQL_HOME=$1
 export PATH=$PATH:$PGSQL_HOME/bin
 export PGDATA=$PGSQL_HOME/data
 export PGDATABASE=postgres
