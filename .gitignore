@@ -17,5 +17,6 @@ pgsql
 postgresql-*
 logfile
 
-
+# mysql
+mysql-5*
 

@@ -11,6 +11,27 @@
 1. import sample data into the DB
     * ./initPostgres.sh $PGSQL_HOME
 
+## MySQL setup
+1. Download MySQL Community Server
+    * https://dev.mysql.com/downloads/mysql/
+1. add mysql user and group
+    * groupadd mysql
+    * useradd -r -g mysql -s /bin/false mysql
+1. untar / unzip mySQL server (**Note** MYSQL_HOME refers to the uncompressed
+   directory)
+1. cd $MYSQL_HOME
+1. initialize server
+    * bin/mysqld --initialize --user=mysql --basedir=. 
+    * save the temporary generated password for the root user
+        * [Note] A temporary password is generated for root@localhost: _
+1. start server
+    * bin/mysqld_safe --user=mysql --basedir=. &
+1. change the MySQL server root password
+    * bin/mysql -u root -p -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root'" --connect-expired-password 
+1. run the mysql-setup script
+    * ../mysql-setup.sh .
+
+* **Note** MySQL deamon is still running as background process
 
 
 
