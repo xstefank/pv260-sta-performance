@@ -52,3 +52,4 @@ CREATE TABLE Loan ( -- df: mult=0.7
   BookItem_id int NOT NULL REFERENCES BookItem, 
   Reader_id   int NOT NULL REFERENCES Reader, 
   PRIMARY KEY (id));
+

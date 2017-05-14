@@ -21,15 +21,18 @@
    directory)
 1. cd $MYSQL_HOME
 1. initialize server
-    * bin/mysqld --initialize --user=mysql --basedir=. 
+    * bin/mysqld --initialize --user=mysql --basedir=$MYSQL_HOME
     * save the temporary generated password for the root user
         * [Note] A temporary password is generated for root@localhost: _
-1. start server
-    * bin/mysqld_safe --user=mysql --basedir=. &
+1. start daemon
+    * bin/mysqld_safe --user=mysql --basedir=$MYSQL_HOME &
 1. change the MySQL server root password
     * bin/mysql -u root -p -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root'" --connect-expired-password 
+    * you will be asked to enter the temporary password
+    * you can test the password by enterint mysql CLI - bin/mysql -u root -p
+1. cd repo/mysql
 1. run the mysql-setup script
-    * ../mysql-setup.sh .
+    * ./mysql-setup.sh $MYSQL_HOME
 
 * **Note** MySQL deamon is still running as background process
 
