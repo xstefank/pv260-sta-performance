@@ -20,3 +20,7 @@ logfile
 # mysql
 mysql-5*
 
+
+# derby
+db-derby-*
+
