@@ -1,0 +1,15 @@
+Starting audit...
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:14:5: Cyclomatic Complexity is 7 (max allowed is 3). [CyclomaticComplexity]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:14:5: Method TooMuchVariablesMethod[14x16] has too many variables. Count: 10 Maximum is: 5 [MethodMaxVariables]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:42:5: Method length is 32 lines (max allowed is 30). [MethodLength]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:79:5: Cyclomatic Complexity is 4 (max allowed is 3). [CyclomaticComplexity]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:85:17: Nested if-else depth is 2 (max allowed is 1). [NestedIfDepth]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:92:5: Cyclomatic Complexity is 4 (max allowed is 3). [CyclomaticComplexity]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:95:17: Nested for depth is 2 (max allowed is 1). [NestedForDepth]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:103:5: Cyclomatic Complexity is 4 (max allowed is 3). [CyclomaticComplexity]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:108:17: Nested try depth is 2 (max allowed is 1). [NestedTryDepth]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:122:5: Cyclomatic Complexity is 7 (max allowed is 3). [CyclomaticComplexity]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:122:5: Method tooComplexMethod[122x16] has too many variables. Count: 7 Maximum is: 5 [MethodMaxVariables]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:128:17: Nested if-else depth is 2 (max allowed is 1). [NestedIfDepth]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/ExampleBrainMethodClass.java:132:29: Nested for depth is 2 (max allowed is 1). [NestedForDepth]
+Audit done.
