@@ -3,20 +3,20 @@
 
 ## 1. Problem
 ### Root causes
-1.
-1.
-1.
+1. QA disinterest in actual quality of the product
+1. Developers prioritisations - fixing bugs vs new features
+1. QA not taking issues seriously - every issue fix should be tested (regressions)
 
 ### Possible solutions
-1.
-    *
-    *
-1.
-    *
-    *
-1.
-    *
-    *
+1. Involment of QA - they are not doing their jobs :)
+    * QA disinterest and laziness
+    * Overall develepment process issues
+1. Refinement of the issues creation process - avoid useless issues
+    * Issue tracking system may not support such tooling
+    * QA may not be interested in searching for duplicates or creating reproducer/steps to reproduce
+1. Redefine the QA priorities - QA participation in more general scope of development
+    * QA disinterest as they are not interested by far
+    * Developers disinterest in participation
 
 ## 2. Problem
 ### Root causes
