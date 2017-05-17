@@ -8,10 +8,12 @@
 
 ## PostgreSQL
 
-Throughput
-<p align="center">
-  <img style="align: center" src="postgres-throughput.png" alt="PostgreSQL
-  throughput">
-</p>
+![PostgreSQL throughput](charts/postgres-throughput.png)
+
+
+![PostgreSQL response time](charts/postgres-resp-time.png)
+
+
+![PostgreSQL memory usage](charts/postgres-memory.png)
 
 

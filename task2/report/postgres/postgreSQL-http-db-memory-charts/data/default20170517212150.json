@@ -1,0 +1,1 @@
+{"baseName":"default20170517212150","name":"Memory postgreSQL (http-db [GC=false])","xAxis":"Time","yAxis":"Memory usage [MiB]","xAxisType":"TIME","attributes":["Time","Total","Used"],"group":"default","combined":false,"created":1495048911371,"height":400,"type":"LINE"}
