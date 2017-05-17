@@ -1,5 +1,3 @@
-package cz.muni.fi.pv260.chkstyle;
-
 import java.util.Random;
 
 /**
