@@ -29,7 +29,7 @@ public class MethodMaxVariablesCheck extends Check {
             int variableCount = getTokensCount(ast, TokenTypes.VARIABLE_DEF);
             if (variableCount > max) {
                 log(ast.getLineNo(), ast.getColumnNo(), "Method "
-                        + methodName + "has too many variables."
+                        + methodName + " has too many variables."
                         + " Count: " + variableCount
                         + " Maximum is: " + max);
             }

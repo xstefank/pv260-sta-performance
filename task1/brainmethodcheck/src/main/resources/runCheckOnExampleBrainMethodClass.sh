@@ -9,4 +9,3 @@ echo 'Results:'
 echo
 cat brain_check_result.txt
 echo
-cd ../../../src/main/resources/
