@@ -1,0 +1,1 @@
+{"baseName":"default20170517212150","name":"Response time postgreSQL (http-db)","xAxis":"Time","yAxis":"Response time [ms]","xAxisType":"TIME","attributes":["Time","Result","Average"],"group":"default","combined":false,"created":1495048911362,"height":400,"type":"LINE"}

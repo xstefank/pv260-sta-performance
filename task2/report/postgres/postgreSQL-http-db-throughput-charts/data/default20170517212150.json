@@ -1,0 +1,1 @@
+{"baseName":"default20170517212150","name":"Throughput postgreSQL (http-db)","xAxis":"Time","yAxis":"Iterations per second","xAxisType":"TIME","attributes":["Time","Result","Average"],"group":"default","combined":false,"created":1495048911134,"height":400,"type":"LINE"}
