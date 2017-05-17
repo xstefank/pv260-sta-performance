@@ -11,7 +11,7 @@ export PGPORT=5432
 export PGLOCALEDIR=$PGSQL_HOME/share/locale
 
 # init DB - uncomment this if you are running this script for the first time
-# echo "Initializing DB..." && $PGSQL_HOME/bin/initdb -U postgres -A trust
+echo "Initializing DB..." && $PGSQL_HOME/bin/initdb -U postgres -A trust
 
 echo "Starting ctl..."
 $PGSQL_HOME/bin/pg_ctl -D $PGSQL_HOME/data -l logfile start

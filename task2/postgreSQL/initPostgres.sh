@@ -8,4 +8,5 @@ $PGSQL_HOME/bin/psql -U postgres -d postgres -a -f tables-create.sql
 echo "Importing sample data"
 $PGSQL_HOME/bin/psql -U postgres -d postgres -a -f data-import.sql
 
+echo "done"
 
