@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd brainmethodcheck
+
 # builde project
 mvn clean install
 
