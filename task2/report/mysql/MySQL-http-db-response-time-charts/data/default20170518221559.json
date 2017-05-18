@@ -1,0 +1,1 @@
+{"baseName":"default20170518221559","name":"Response time MySQL (http-db)","xAxis":"Time","yAxis":"Response time [ms]","xAxisType":"TIME","attributes":["Time","Result","Average"],"group":"default","combined":false,"created":1495138560641,"height":400,"type":"LINE"}

@@ -1,0 +1,1 @@
+{"baseName":"default20170518221559","name":"Memory MySQL (http-db [GC=false])","xAxis":"Time","yAxis":"Memory usage [MiB]","xAxisType":"TIME","attributes":["Time","Total","Used"],"group":"default","combined":false,"created":1495138560650,"height":400,"type":"LINE"}

@@ -17,3 +17,13 @@
 ![PostgreSQL memory usage](charts/postgres-memory.png)
 
 
+## MySQL
+
+![MySQL throughput](charts/mysql-throughput.png)
+
+![MySQL response time](charts/mysql-resp-time.png)
+
+![MySQL memory usage](charts/mysql-memory.png)
+
+
+

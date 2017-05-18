@@ -30,7 +30,8 @@
     * `bin/mysql -u root -p -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root'" --connect-expired-password`
     * you will be asked to enter the temporary password
     * you can test the password by enterint mysql CLI - `bin/mysql -u root -p`
-1. `cd repository/mysql`
+        * the password should be "root"
+1. `cd repository_dir/task2/mysql`
 1. run the mysql-setup script
     * `./mysql-setup.sh $MYSQL_HOME`
 
