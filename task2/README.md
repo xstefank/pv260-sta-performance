@@ -41,6 +41,8 @@
 1. Download Derby server from https://db.apache.org/derby/derby_downloads.html
 1. untar / unzip server to `DERBY_HOME`
 1. `./derbySetup.sh $DERBY_HOME`
+1. `cd $DERBY_HOME`
+1. `bin/startNerworkServer`
 
 
 

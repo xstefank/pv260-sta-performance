@@ -25,5 +25,15 @@
 
 ![MySQL memory usage](charts/mysql-memory.png)
 
+## Derby
+
+![Derby throughput](charts/derby-throughput.png)
+
+![Derby response time](charts/derby-resp-time.png)
+
+![Derby memory usage](charts/derby-memory.png)
+
+
+
 
 
