@@ -54,4 +54,9 @@
 
 ![Derby JDBC response time](charts/derby-jdbc-resp-time.png)
 
+### Final remarks
+
+As the Vertx application is generating SQL queries by random year on each request it is in my opinion not a valid performance measure. The query is selection loans for books published after some random year which could mean in one case nothing and in second request a whole database. We can then see and possibly compare only the peek cases shown in the diagrams in which none of databases seems to go very distant from others. One interesting observation can be the MySQL is using constantly more memory then PostgreSQL and Derby.
+
+Second measurements made by the Perfcake's JdbcSender are more accurate. We've created a separate scenario and message containg a SQL query. Each query retrieves around 4000 lines from cross join of all tables (similar to vertx app query). Again MySQL is a little bit behind other databases in the throughtput measures. For the PostgreSQL and Derby it isteresting to see the peeks in iterations per second where for a few moments the throughput is enourmously scaled.
  
