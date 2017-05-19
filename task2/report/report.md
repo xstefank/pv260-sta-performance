@@ -6,13 +6,13 @@
     * Intel(R) Core(TM) i7-4600U CPU @ 2.10 GHz
     * RAM - 12 GiB
 
+# Vertx library application
+
 ## PostgreSQL
 
 ![PostgreSQL throughput](charts/postgres-throughput.png)
 
-
 ![PostgreSQL response time](charts/postgres-resp-time.png)
-
 
 ![PostgreSQL memory usage](charts/postgres-memory.png)
 
@@ -34,6 +34,16 @@
 ![Derby memory usage](charts/derby-memory.png)
 
 
+# JDBC sender
+ 
+## PostgreSQL
 
+![PostgreSQL throughput](charts/postgres-jdbc-throughput.png)
+
+![PostgreSQL throughput](charts/postgres-jdbc-resp-time.png)
+
+## MySQL
+
+## Derby
 
 
