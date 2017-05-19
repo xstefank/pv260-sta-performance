@@ -1,6 +1,11 @@
 
 # Task 2 - Database performace comparisons
 
+## Report
+
+* all reports for the performace tests are located in the report directory
+* summary can be found in the report.md file
+
 ## PostgreSQL setup
 1. download postgres binaries from https://www.enterprisedb.com/products-services-training/pgbindownload
 1. untar / unzip binary (**Note** `PGSQL_HOME` refers to the uncompressed
