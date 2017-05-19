@@ -50,4 +50,8 @@
 
 ## Derby
 
+![Derby JDBC throughput](charts/derby-jdbc-throughput.png)
 
+![Derby JDBC response time](charts/derby-jdbc-resp-time.png)
+
+ 

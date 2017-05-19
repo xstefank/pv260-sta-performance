@@ -1,0 +1,1 @@
+{"baseName":"default20170519220256","name":"Throughput DerbySQLJDBC (derby-jdbc)","xAxis":"Time","yAxis":"Iterations per second","xAxisType":"TIME","attributes":["Time","Result","Average"],"group":"default","combined":false,"created":1495224177260,"height":400,"type":"LINE"}
