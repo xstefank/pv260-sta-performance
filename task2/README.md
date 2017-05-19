@@ -3,8 +3,8 @@
 
 ## Report
 
-* all reports for the performace tests are located in the report directory
-* summary can be found in the report.md file
+* all reports for the performace tests are located in the [report](report) directory
+* summary can be found in the [report.md](report/report.md) file
 
 ## PostgreSQL setup
 1. download postgres binaries from https://www.enterprisedb.com/products-services-training/pgbindownload
