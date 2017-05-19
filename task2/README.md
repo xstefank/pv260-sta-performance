@@ -35,7 +35,7 @@
 1. run the mysql-setup script
     * `./mysql-setup.sh $MYSQL_HOME`
 
-* **Note** MySQL deamon is still running as background process
+* **Note** MySQL daemon is still running as background process
 
 ## Derby setup
 1. Download Derby server from https://db.apache.org/derby/derby_downloads.html

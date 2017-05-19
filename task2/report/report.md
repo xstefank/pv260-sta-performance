@@ -38,11 +38,15 @@
  
 ## PostgreSQL
 
-![PostgreSQL throughput](charts/postgres-jdbc-throughput.png)
+![PostgreSQL JDBC throughput](charts/postgres-jdbc-throughput.png)
 
-![PostgreSQL throughput](charts/postgres-jdbc-resp-time.png)
+![PostgreSQL JDBC throughput](charts/postgres-jdbc-resp-time.png)
 
 ## MySQL
+
+![MySQL JDBC throughput](charts/mysql-jdbc-throughput.png)
+
+![MySQL JDBC response time](charts/mysql-jdbc-resp-time.png)
 
 ## Derby
 

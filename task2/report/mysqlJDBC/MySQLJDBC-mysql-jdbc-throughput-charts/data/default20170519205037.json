@@ -1,0 +1,1 @@
+{"baseName":"default20170519205037","name":"Throughput MySQLJDBC (mysql-jdbc)","xAxis":"Time","yAxis":"Iterations per second","xAxisType":"TIME","attributes":["Time","Result","Average"],"group":"default","combined":false,"created":1495219839190,"height":400,"type":"LINE"}
