@@ -37,20 +37,20 @@
 
 ## 3. Problem
 ### Root causes
-1. Minor changes are not tested by Unit tests / Regression tests
+1. Other teams do not care about test passing
 1. There is no code review in those teams
-1. Too many junior developers in those teams
+1. Other teams not finding their own errors with enough time left before release
 
 ### Possible solutions
-1.
-    *
-    *
-1. Select a developer to perform code review before a feature gets passed to release branches
-    * This might result in work priority change for the selected developer
+1. Pressure other teams not to commit unstable changes
+    * Refusal of the participation from the other teams
+    * No tooling or knowledge in other teams how to avoid such situations
+1. Mandatory code review before a feature gets passed to release branches
+    * This might result in work priority change
     * The development will take more time
-1. Fill those teams with equally distributed junior/senior developers
-    * Finding those senior developers could be tricky
-    * If the teams won't work well with the new developers, a team leader could be needed
+1. Enhance communications between teams to find problems asap
+    * Refusal of participations from both sides
+    * Time and priorities management prior to the release
 
 ## 4. Problem
 ### Root causes
