@@ -20,20 +20,20 @@
 
 ## 2. Problem
 ### Root causes
-1. CI is running all sort of tests including the ones that are not necessary for CI's purposes
-1. The acceptance tests consist of unrelevant time-wasting tests that are not part of the performance requirements or specification
-1. Using CI as Acceptance test base might be the wrong idea (TODO: not sure if i'm telling bullshit)
+1. CI is running all sort of tests including the ones that are not necessary for a change done in the fix / release
+1. The acceptance tests may consist of unrelevant time-wasting tests that are not part of the performance requirements or specification
+1. Running whole test suite for an emergency fix may not be possible due to the time aspect
 
 ### Possible solutions
-1. Use CI for its purposes. Don't run performance tests in CI.
-    * Less reliability of the CI results
-    * The acceptance tests will have to be severely modified
-1. Reduce the time by removing long tasks that are not as important / allow to configure what tests should be executed
-    * Again, we face less reliability as the effect of removing another tests
-    * Implementing the configuration and ensuring all test dependencies are met could be time-consuming
-1.
-    * 
-    *
+1. Split the acceptance test suite to the smaller clusters of tests
+    * Long tests may be unpossible to split
+    * Acceptance test suite may break due to the separation
+1. Reduce the time by removing long tasks that are not as important / allow to configure testing specifications
+    * Problem stating what exactly should be configurable
+    * Easy and transparent configuration may require additional effort
+1. Emergency fixes should have a separate CI to be always available in such cases
+    * No enough resources for another integration framework
+    * May be a resource wasting depending of how often emergency fixes happen
 
 ## 3. Problem
 ### Root causes
