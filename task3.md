@@ -38,13 +38,13 @@
 ## 3. Problem
 ### Root causes
 1. Other teams do not care about test passing
-1. There is no code review in those teams
-1. Other teams not finding their own errors with enough time left before release
+1. Other teams are not doing code reviews
+1. Other teams are not finding their own errors with enough time left before release
 
 ### Possible solutions
 1. Pressure other teams not to commit unstable changes
     * Refusal of the participation from the other teams
-    * No tooling or knowledge in other teams how to avoid such situations
+    * No tooling or required knowledge in other teams how to avoid such situations
 1. Mandatory code review before a feature gets passed to release branches
     * This might result in work priority change
     * The development will take more time
@@ -55,70 +55,70 @@
 ## 4. Problem
 ### Root causes
 1. Unskilled engineers
-1. Bad specification of work
-1. They need a better Team leader
+1. Bad working specification
+1. Lack of right team management
 
 ### Possible solutions
-1. Pay them for courses to get some experience
-    * Will be time-consuming and expensive
-    * If there is a problem with their Attitude, this could not help
-1. Give them a better specification
+1. Organize testing oriented courses to get some experience
+    * May be time-consuming and expensive
+    * A problem with their attitude
+1. Create a better specification
     * Might result into a misunderstanding
-    * If this was the problem, than you should consider talking to the QA team lead
-1. Speak with the team leader or seek for a new one
-    * He can't motivate the engineers to do the work correctly, he is not assertive enough to be a team leader
-    * Replacing a team leader is time-consuming. The new one would need time to sink in
+    * No eligible time and / or people for specification creation
+1. Consider hiring more experienced people
+    * No people for such position
+    * Current testers may take it offesively
 
 ## 5. Problem
 ### Root causes
-1. There is no issue prioritization
-1. Bad team composition
-1. Missing overall awareness about client's needs
+1. Prioritization of work reponsibilities
+1. Enforcement of main mandatory responsibilities for each team member
+1. Enhance overall awareness about client's needs for team memebers
 
 ### Possible solutions
-1. Use Issue-tracking system that allows for issues to set the priority
-    * If they're stubborn, there is a chance that they will not follow the highest priority task anyways
+1. Use issue-tracking system that allows for issues to set the priority
+    * May still be setting invalid priorities
     * Getting used to a new tracking system takes some time
-1. Switch team composition by changing engineers with other QA or motivate/stimulate some of them to prioritize customer specified issues by involving them in the customer/company communication process
-    * Changing the composition could result in new set of problems
-    * Involving an engineer in the communication process could not be always a wise choice. But when it goes right, the problem could be solved very fast and effectively
-1. Do a meetup regularly to talk about recent issues and assign them as the meetup goes on
-    * Again, stubborn engineers might argue
-    * (TODO: What could go wrong here?)
+1. Explain team members the company mission and what their work should prioritize
+    * May not consider customer issues as priority
+    * Resistence to drop automatization focus as it make their work easier
+1. Do a meetup regularly to talk about recent issues possibly including customer
+    * Refusal of participation
+    * Refusal of actively following and prioritize discussed issues 
 
 ## 6. Problem
 ### Root causes
-1. He probably wishes to be promoted
-1. He has no other work to do
-1. No other person is doing code reviews
+1. Developer is over confident and stubborn
+1. Developer is not open to discussion
+1. Missing third party view to the problem of whether comments should be fixed
 
 ### Possible solutions
-1. Cool him down at the meeting (whole-team meeting on the last-week completed tasks list - bring up the problem and talk)
+1. Teach the developer to not pressure other team members
     * He could get insecure/angry after receiving a lot of critic
-    * May result in a situation when the team leader would have to do the code reviews as a sacrifice.
-1. Assign more tasks to him
-    * He could argue he gets done twice as much work as others
-    * He could begin to be less effective
-1. Allow him to do the code reviews, but revise these reviews to be not jumping far behind the task specification
-    * If these reviews are really that detailed, this might begin to be too uncomfortable for others and then disallowing him to do the reviews would not be adequate
-    * Others will get stressed 
+    * May stop making code reviews
+1. Teach the developer soft skills - communication as important part of everyday work
+    * May refuse to participate as he thinks he is always right
+    * Even more communication may not change his mind on the specific comment problems
+1. Require code review from more than one person / review the reviews
+    * Duplicates the same work
+    * May refuse the other reviewers comments as well 
 
 ## 7. Problem
 ### Root causes
-1. Small amount of branch levels
-1. No testing done before pushing changes
-1. Too many people are working with the same branch
+1. Small amount of branch levels - separate branches for fixes
+1. No testing done before merging changes to the main branch - use CI
+1. Review each fix before the actual merge to the mainline production branch
 
 ### Possible solutions
 1. Introduce more levels of development branches
     * Could result in breaking up the current flow
-    * More people would be needed to take care of their assigned branches
-1. Introduce regression testing and unit testing 
-    * Development would be slower
-    * Developers will have to implement the tests
-1. Assign the merging work to one person per team
-    * He could get overwhelmed by just doing those merges
-    * Conflict-resolving would be very hard if the person doesn't have enough awareness in his team
+    * Complications in the development process
+1. Introduce CI for fix testing 
+    * Development can be slower
+    * More responsibilities for the developers
+1. Specify checklist of requirements of each fix to follow before merge to the mainline branch (CI pass, reviews...)
+    * Problem to specify what exactly should the requirements be
+    * Development may slow down, as there will be more tasks to do than only push fix
 
 ## 8. Problem
 ### Root causes
