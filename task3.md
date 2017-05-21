@@ -139,36 +139,36 @@
 
 ## 9. Problem
 ### Root causes
-1.
-1.
-1.
+1. Not sufficiently defined responsibilities for individual teams in the company
+1. Lack of management and knowledge of the organization structure in top level management
+1. Lack of proper way for employees to notify management about such problems
 
 ### Possible solutions
-1.
-    *
-    *
-1.
-    *
-    *
-1.
-    *
-    *
+1. Define in proper and well documented way responsibilities for team hierarchies
+    * May be problem to define where are clusters of teams for individual responsibilities 
+    * May be necessary to split / group some of the teams
+1. Allow employees to contact high management (directly / undirectly through thier managers) above their concerns
+    * Depending on the selected medium - the ammount of requests can be large
+    * Prioritazion of concers
+1. Prioritize for top management more interaction and learning in the end employees work
+    * Employees may be resitant to allow management study their work duties
+    * May require higher anticipation and study from the management
 
 ## 10. Problem
 ### Root causes
-1.
-1.
-1.
+1. Too small code coverage
+1. Too fast development cycle not allowing proper testing
+1. Too many new features pushed with every release
 
 ### Possible solutions
-1.
-    *
-    *
-1.
-    *
-    *
-1.
-    *
+1. Writing more tests
+    * Resistance from the actual developers as they need to focus on development
+    * May require hiring new people
+1. Prolong development cycle to allow testing periods
+    * More time spent tesing may require less features delivered with each release
+    * May result into customer disatisfaction with the product
+1. Testing in the customer environment
+    * Customer may be resistant to share their environment specifications
     *
 
 ## 11. Problem
