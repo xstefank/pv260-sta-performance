@@ -122,20 +122,20 @@
 
 ## 8. Problem
 ### Root causes
-1.
-1.
-1.
+1. Lack of understanding of the product (whether developers of manager side)
+1. Missing agreement between both sides
+1. Lack of the third party view for the problem
 
 ### Possible solutions
-1.
-    *
-    *
-1.
-    *
-    *
-1.
-    *
-    *
+1. Specify the arguments for both sides and come up with agreement through the discussion
+    * No enough valid arguments on either of sides
+    * Refusal to eventualy come to compromise
+1. Include third party independent opinion to the situation
+    * It may take long time for the reviewer to understand product priorities
+    * Sides may still refuse to follow advices and arguments
+1. Discuss the problem with actual customers that use the product
+    * Refusal of participation from the customer side
+    * Customers may be unsure of what exactly their priorities are
 
 ## 9. Problem
 ### Root causes
