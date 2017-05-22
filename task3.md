@@ -161,49 +161,49 @@
 1. Too many new features pushed with every release
 
 ### Possible solutions
-1. Writing more tests
+1. Writing more tests - better code coverage
     * Resistance from the actual developers as they need to focus on development
     * May require hiring new people
 1. Prolong development cycle to allow testing periods
     * More time spent tesing may require less features delivered with each release
     * May result into customer disatisfaction with the product
 1. Testing in the customer environment
-    * Customer may be resistant to share their environment specifications
-    *
+    * Customers may be resistant to share their environment specifications
+    * Could not be possible to reproduce issues even in the cutomers environment
 
 ## 11. Problem
 ### Root causes
-1.
-1.
-1.
+1. Lack of product knowledge in Technical Support
+1. Uninterest in product from Technical Support
+1. Technical support ability to close issues (invalid closes)
 
 ### Possible solutions
-1.
-    *
-    *
-1.
-    *
-    *
-1.
-    *
-    *
+1. Enhance the Technical support product knowledge through training courses
+    * May be problem to find people to teach
+    * Time aspect as this can be a long process
+1. Enhance Technical Support communications with other teams (unsure whether to close issue)
+    * Refusal of contribution from other teams
+    * May slow down development (maintainance) process
+1. Temporarily prohibit Technical Support teams from closing issues
+    * May slow down the process
+    * Requirement of other teams to check Technical support decisions
 
 ## 12. Problem
 ### Root causes
-1.
-1.
-1.
+1. No reliable dupliation detection
+1. No tracking in place of issues / problems
+1. Lack of knowledge exchanging capabilities
 
 ### Possible solutions
-1.
-    *
-    *
-1.
-    *
-    *
-1.
-    *
-    *
+1. Start using issue tracking system
+    * May be hard to move from current development process state
+    * May take time to really take advantage of it
+1. Possibly implement own duplication detection for the problems
+    * Still there is need to track the problems in one place
+    * Lack of knowledge to perform such task which would perform efficiently
+1. Enhance communication between DEV and QA, use the same tracking system
+    * Cooperation may be difficult as cycles in teams may differ
+    * May take more time to decide whether problem really is a duplicate
 
 ## 13. Problem
 ### Root causes
