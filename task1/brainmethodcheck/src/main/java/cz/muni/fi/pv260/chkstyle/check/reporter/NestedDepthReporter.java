@@ -77,7 +77,9 @@ public final class NestedDepthReporter extends AbstractCheckReporter {
                 TokenTypes.LITERAL_DO,
                 TokenTypes.LITERAL_IF,
                 TokenTypes.LITERAL_SWITCH,
-                TokenTypes.LITERAL_TRY
+                TokenTypes.LITERAL_TRY,
+                TokenTypes.LITERAL_CATCH,
+                TokenTypes.LITERAL_FINALLY
         };
     }
 

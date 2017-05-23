@@ -80,6 +80,7 @@ public class BrainMethodCheck extends AbstractCheck {
                 TokenTypes.LITERAL_IF,
                 TokenTypes.LITERAL_SWITCH,
                 TokenTypes.LITERAL_CASE,
+                TokenTypes.LITERAL_TRY,
                 TokenTypes.LITERAL_CATCH,
                 TokenTypes.QUESTION,
                 TokenTypes.LAND,
