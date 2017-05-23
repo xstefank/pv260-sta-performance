@@ -69,7 +69,7 @@ public class BrainMethodCheck extends AbstractCheck {
     }
 
     public int[] getDefaultTokens() {
-        return new int[] {
+        return new int[]{
                 TokenTypes.CTOR_DEF,
                 TokenTypes.METHOD_DEF,
                 TokenTypes.INSTANCE_INIT,
@@ -113,22 +113,22 @@ public class BrainMethodCheck extends AbstractCheck {
     }
 
     private void reportMethod(DetailAST ast) {
-        String methodName = ast.findFirstToken(TokenTypes.IDENT).getText();
-        StringBuilder reportStringBuilder = new StringBuilder();
-        reportStringBuilder.append(String.format("Method %s ", methodName));
+
 
         List<String> failedChecks = reporters.stream().filter(r -> !r.getCheckReport().passed())
                 .map(r -> r.getCheckReport().toString()).collect(Collectors.toList());
 
-        //TODO do we want passed logging?
-        if (failedChecks.isEmpty()) {
-            reportStringBuilder.append(PASSED);
-        } else {
-            reportStringBuilder.append(FAILED + " ")
-                    .append(failedChecks.toString());
+        if (!failedChecks.isEmpty()) {
+            String methodName = ast.findFirstToken(TokenTypes.IDENT).getText();
+
+            StringBuilder reportStringBuilder = new StringBuilder();
+            reportStringBuilder.append(String.format("Method %s ", methodName));
+
+            reportStringBuilder.append(FAILED + " ").append(failedChecks.toString());
+
+            log(ast, reportStringBuilder.toString());
         }
 
-        log(ast, reportStringBuilder.toString());
     }
 
     public void setLinesOfCode(int linesOfCode) {

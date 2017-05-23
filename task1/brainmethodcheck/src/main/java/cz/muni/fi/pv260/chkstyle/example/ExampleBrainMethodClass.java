@@ -160,4 +160,16 @@ public class ExampleBrainMethodClass {
             //noop
         }
     }
+
+    public void noBrainMethod() {
+        System.out.println("Valid method");
+        int x = 1;
+        try {
+            if (x > 0) {
+                x++;
+            }
+        } catch (Exception e) {
+            --x;
+        }
+    }
 }
