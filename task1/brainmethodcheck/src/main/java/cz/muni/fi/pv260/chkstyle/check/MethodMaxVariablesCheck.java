@@ -1,4 +1,4 @@
-package cz.muni.fi.pv260.chkstyle;
+package cz.muni.fi.pv260.chkstyle.check;
 
 import com.puppycrawl.tools.checkstyle.api.Check;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;

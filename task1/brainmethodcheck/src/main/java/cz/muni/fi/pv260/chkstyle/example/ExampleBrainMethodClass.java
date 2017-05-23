@@ -1,3 +1,5 @@
+package cz.muni.fi.pv260.chkstyle.example;
+
 import java.util.Random;
 
 /**
@@ -5,11 +7,7 @@ import java.util.Random;
  */
 public class ExampleBrainMethodClass {
 
-    public ExampleBrainMethodClass() {
-
-    }
-
-    public void TooMuchVariablesMethod() {
+    public void tooManyVariablesMethod() {
         int x = 5, y = 4, z, w;
         if (5 * x > 4 * y) {
             for (int i = 0; i <= 5; i++) {
