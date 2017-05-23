@@ -45,9 +45,9 @@ import java.util.Deque;
  * @author Oliver Burn
  * @author <a href="mailto:andreyselkin@gmail.com">Andrei Selkin</a>
  */
-public class CyclomaticComplexityCheck implements CheckReporter {
+public class CyclomaticComplexityReporter implements CheckReporter {
 
-    private CheckReport checkReport = CheckReportFactory.newPassingCheck(this.getClass().getSimpleName());
+    private CheckReport checkReport;
 
     /** The initial current value. */
     private static final BigInteger INITIAL_VALUE = BigInteger.ONE;
@@ -67,8 +67,9 @@ public class CyclomaticComplexityCheck implements CheckReporter {
     /** Threshold to report error for. */
     private int max = DEFAULT_COMPLEXITY_VALUE;
 
-    public CyclomaticComplexityCheck(int max) {
+    public CyclomaticComplexityReporter(int max) {
         this.max = max;
+        clearReport();
     }
 
     /**
@@ -142,8 +143,12 @@ public class CyclomaticComplexityCheck implements CheckReporter {
     }
 
     @Override
-    public void visitToken(CheckContext context) {
-        DetailAST ast = context.getAst();
+    public void clearReport() {
+        checkReport = CheckReportFactory.newPassingCheck(this.getClass().getSimpleName());
+    }
+
+    @Override
+    public void visitToken(DetailAST ast) {
         switch (ast.getType()) {
             case TokenTypes.CTOR_DEF:
             case TokenTypes.METHOD_DEF:
@@ -157,8 +162,7 @@ public class CyclomaticComplexityCheck implements CheckReporter {
     }
 
     @Override
-    public void leaveToken(CheckContext context) {
-        DetailAST ast = context.getAst();
+    public void leaveToken(DetailAST ast) {
         switch (ast.getType()) {
             case TokenTypes.CTOR_DEF:
             case TokenTypes.METHOD_DEF:

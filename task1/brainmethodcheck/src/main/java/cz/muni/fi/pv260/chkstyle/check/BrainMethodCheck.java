@@ -4,10 +4,10 @@ import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.SeverityLevel;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
-import cz.muni.fi.pv260.chkstyle.check.reporter.CheckContext;
 import cz.muni.fi.pv260.chkstyle.check.reporter.CheckReport;
 import cz.muni.fi.pv260.chkstyle.check.reporter.CheckReporter;
-import cz.muni.fi.pv260.chkstyle.check.reporter.CyclomaticComplexityCheck;
+import cz.muni.fi.pv260.chkstyle.check.reporter.CyclomaticComplexityReporter;
+import cz.muni.fi.pv260.chkstyle.check.reporter.MethodLengthReporter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,13 +15,17 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author <a href="mailto:xstefank122@gmail.com">Martin Stefanko</a>
  */
 public class BrainMethodCheck extends AbstractCheck {
 
-    private CheckContext context = new CheckContext(false, null);
+
+    private static final String PASSED = "PASSED";
+    private static final String FAILED = "FAILED";
+
 
     private int linesOfCode;
     private int cyclomaticComplexity;
@@ -32,7 +36,8 @@ public class BrainMethodCheck extends AbstractCheck {
 
     private List<CheckReporter> initReporters() {
         return Arrays.asList(
-                new CyclomaticComplexityCheck(cyclomaticComplexity)
+                new MethodLengthReporter(linesOfCode, false, getFileContents()),
+                new CyclomaticComplexityReporter(cyclomaticComplexity)
         );
     }
 
@@ -45,7 +50,7 @@ public class BrainMethodCheck extends AbstractCheck {
                 if (mapping.get(token) != null) {
                     mapping.get(token).add(reporter);
                 } else {
-                    mapping.put(token, Collections.singletonList(reporter));
+                    mapping.put(token, new ArrayList<>(Collections.singletonList(reporter)));
                 }
             });
         });
@@ -79,39 +84,45 @@ public class BrainMethodCheck extends AbstractCheck {
 
     @Override
     public void visitToken(DetailAST ast) {
-        context.setAst(ast);
-        reportersTokenMap.get(ast.getType()).forEach(r -> r.visitToken(context));
 
-
-
-//        if (methodLengthReport.passed()) {
-//            logPassed(ast, methodLengthReport);
-//        } else {
-//            logFailed(ast, methodLengthReport);
-//        }
-
+        reportersTokenMap.get(ast.getType()).forEach(r -> r.visitToken(ast));
 
 
     }
 
     @Override
     public void leaveToken(DetailAST ast) {
+
+        reportersTokenMap.get(ast.getType()).forEach(r -> r.leaveToken(ast));
+
         if (ast.getType() == TokenTypes.METHOD_DEF) {
             reportMethod(ast);
-
+            clearReports();
         }
 
-        context.setAst(ast);
-        reportersTokenMap.get(ast.getType()).forEach(r -> r.leaveToken(context));
+    }
 
-
+    private void clearReports() {
+        reporters.forEach(CheckReporter::clearReport);
     }
 
     private void reportMethod(DetailAST ast) {
         String methodName = ast.findFirstToken(TokenTypes.IDENT).getText();
+        StringBuilder reportStringBuilder = new StringBuilder();
+        reportStringBuilder.append(String.format("Method %s ", methodName));
 
-        reporters.stream().filter(r -> !r.getCheckReport().passed()).forEach(r -> log(ast,
-                String.format("Method %s %s", methodName, r.getCheckReport().toString())));
+        List<String> failedChecks = reporters.stream().filter(r -> !r.getCheckReport().passed())
+                .map(r -> r.getCheckReport().toString()).collect(Collectors.toList());
+
+        //TODO do we want passed logging?
+        if (failedChecks.isEmpty()) {
+            reportStringBuilder.append(PASSED);
+        } else {
+            reportStringBuilder.append(FAILED + " ")
+                    .append(failedChecks.toString());
+        }
+
+        log(ast, reportStringBuilder.toString());
     }
 
     public void setLinesOfCode(int linesOfCode) {

@@ -5,9 +5,12 @@ import com.puppycrawl.tools.checkstyle.api.DetailAST;
 /**
  * @author <a href="mailto:xstefank122@gmail.com">Martin Stefanko</a>
  */
-public interface CheckReporter extends CheckListener {
+public abstract class AbstractCheckReporter implements CheckReporter {
 
-    CheckReport getCheckReport();
+    @Override
+    public void leaveToken(DetailAST ast) {
+        //not required
+    }
 
-    void clearReport();
+
 }

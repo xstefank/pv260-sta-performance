@@ -46,11 +46,12 @@ public class CheckReport {
     public String toString() {
         StringBuilder output = new StringBuilder();
 
-        output.append(passed ? PASSED : FAILED);
+        output.append(" [").append(name).append("] ")
+                .append(passed ? PASSED : FAILED);
         if (!passed) {
             output.append(" - ").append(message);
         }
-        output.append(" [").append(name).append("]");
+
         return output.toString();
     }
 }
