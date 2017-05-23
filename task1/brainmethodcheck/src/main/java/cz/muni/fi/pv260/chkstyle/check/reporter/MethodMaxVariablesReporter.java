@@ -1,15 +1,23 @@
-package cz.muni.fi.pv260.chkstyle.check;
+package cz.muni.fi.pv260.chkstyle.check.reporter;
 
-import com.puppycrawl.tools.checkstyle.api.Check;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
 /**
  * Created by marek on 16/05/2017.
  */
-public class MethodMaxVariablesCheck extends Check {
+public class MethodMaxVariablesReporter extends AbstractCheckReporter {
 
-    private int max;
+    private static final int DEFAULT_MAXIMUM_VALUE = 5;
+
+    private CheckReport checkReport;
+
+    private int max = DEFAULT_MAXIMUM_VALUE;
+
+    public MethodMaxVariablesReporter(int max) {
+        this.max = max;
+        clearReport();
+    }
 
     public void setMax(int max) {
         this.max = max;
@@ -25,13 +33,13 @@ public class MethodMaxVariablesCheck extends Check {
     public void visitToken(DetailAST ast) {
         final DetailAST openingBrace = ast.findFirstToken(TokenTypes.SLIST);
         if (openingBrace != null) {
-            final DetailAST methodName = ast.findFirstToken(TokenTypes.IDENT);
+
             int variableCount = getTokensCount(ast, TokenTypes.VARIABLE_DEF);
+            variableCount += getTokensCount(ast, TokenTypes.PARAMETER_DEF);
+
             if (variableCount > max) {
-                log(ast.getLineNo(), ast.getColumnNo(), "Method "
-                        + methodName + " has too many variables."
-                        + " Count: " + variableCount
-                        + " Maximum is: " + max);
+                checkReport = new CheckReport(false, this.getClass().getSimpleName(),
+                        String.format("Invalid number of used variables %d (maximum is %d)", variableCount, max));
             }
         }
     }
@@ -47,4 +55,13 @@ public class MethodMaxVariablesCheck extends Check {
         return count;
     }
 
+    @Override
+    public CheckReport getCheckReport() {
+        return checkReport;
+    }
+
+    @Override
+    public void clearReport() {
+        checkReport = CheckReportFactory.newPassingCheck(this.getClass().getSimpleName());
+    }
 }

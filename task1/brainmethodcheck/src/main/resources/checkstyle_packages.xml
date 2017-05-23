@@ -5,6 +5,5 @@
         "http://checkstyle.sourceforge.net/dtds/packages_1_0.dtd">
 
 <checkstyle-packages>
-    <package name="cz.muni.fi.pv260.chkstyle.check.reporter" />
     <package name="cz.muni.fi.pv260.chkstyle.check" />
 </checkstyle-packages>

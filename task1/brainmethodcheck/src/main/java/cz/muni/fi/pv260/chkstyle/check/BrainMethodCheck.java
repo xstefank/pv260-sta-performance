@@ -8,6 +8,7 @@ import cz.muni.fi.pv260.chkstyle.check.reporter.CheckReport;
 import cz.muni.fi.pv260.chkstyle.check.reporter.CheckReporter;
 import cz.muni.fi.pv260.chkstyle.check.reporter.CyclomaticComplexityReporter;
 import cz.muni.fi.pv260.chkstyle.check.reporter.MethodLengthReporter;
+import cz.muni.fi.pv260.chkstyle.check.reporter.MethodMaxVariablesReporter;
 import cz.muni.fi.pv260.chkstyle.check.reporter.NestedDepthReporter;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class BrainMethodCheck extends AbstractCheck {
 
     private int linesOfCode;
     private int cyclomaticComplexity;
+    private int nestingDepth;
 
     private List<CheckReporter> reporters;
 
@@ -39,7 +41,8 @@ public class BrainMethodCheck extends AbstractCheck {
         return Arrays.asList(
                 new MethodLengthReporter(linesOfCode, false, getFileContents()),
                 new CyclomaticComplexityReporter(cyclomaticComplexity),
-                new NestedDepthReporter(1)
+                new NestedDepthReporter(nestingDepth),
+                new MethodMaxVariablesReporter(3)
         );
     }
 
@@ -133,6 +136,10 @@ public class BrainMethodCheck extends AbstractCheck {
 
     public void setCyclomaticComplexity(int cyclomaticComplexity) {
         this.cyclomaticComplexity = cyclomaticComplexity;
+    }
+
+    public void setNestingDepth(int nestingDepth) {
+        this.nestingDepth = nestingDepth;
     }
 
     private void logFailed(DetailAST ast, CheckReport report) {
