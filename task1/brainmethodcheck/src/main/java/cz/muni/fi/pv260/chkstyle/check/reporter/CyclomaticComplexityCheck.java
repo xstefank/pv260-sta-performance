@@ -137,13 +137,12 @@ public class CyclomaticComplexityCheck implements CheckReporter {
     }
 
     @Override
-    public CheckReport checkPassed(DetailAST ast) {
+    public CheckReport getCheckReport() {
         return checkReport;
     }
 
     @Override
     public void visitToken(CheckContext context) {
-        System.out.println("XXXXXXXXXXXXX");
         DetailAST ast = context.getAst();
         switch (ast.getType()) {
             case TokenTypes.CTOR_DEF:
@@ -198,7 +197,7 @@ public class CyclomaticComplexityCheck implements CheckReporter {
         final BigInteger bigIntegerMax = BigInteger.valueOf(max);
         if (currentValue.compareTo(bigIntegerMax) > 0) {
             checkReport = new CheckReport(false, this.getClass().getSimpleName(),
-                    String.format("Invalid cyclomatic complexity for maximum: %d", max));
+                    String.format("Invalid cyclomatic complexity for maximum: %d (current was %d)", max, currentValue));
         }
         popValue();
     }

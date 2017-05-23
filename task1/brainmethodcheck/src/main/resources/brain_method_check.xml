@@ -8,6 +8,7 @@
 
         <module name="BrainMethod">
             <property name="linesOfCode" value="30"/>
+            <property name="cyclomaticComplexity" value="3"/>
         </module>
 
 

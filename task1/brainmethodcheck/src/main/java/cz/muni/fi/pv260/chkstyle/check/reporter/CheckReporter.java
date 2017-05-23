@@ -7,5 +7,5 @@ import com.puppycrawl.tools.checkstyle.api.DetailAST;
  */
 public interface CheckReporter extends CheckListener {
 
-    CheckReport checkPassed(DetailAST ast);
+    CheckReport getCheckReport();
 }

@@ -1,2 +1,7 @@
 Starting audit...
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:38:5: Method veryLongMethod FAILED - Invalid cyclomatic complexity for maximum: 3 (current was 7) [CyclomaticComplexityCheck] [BrainMethod]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:75:5: Method tooManyConditionsMethod FAILED - Invalid cyclomatic complexity for maximum: 3 (current was 7) [CyclomaticComplexityCheck] [BrainMethod]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:88:5: Method tooManyCyclesMethod FAILED - Invalid cyclomatic complexity for maximum: 3 (current was 4) [CyclomaticComplexityCheck] [BrainMethod]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:99:5: Method tooManyTriesMethod FAILED - Invalid cyclomatic complexity for maximum: 3 (current was 4) [CyclomaticComplexityCheck] [BrainMethod]
+[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:118:5: Method tooComplexMethod FAILED - Invalid cyclomatic complexity for maximum: 3 (current was 4) [CyclomaticComplexityCheck] [BrainMethod]
 Audit done.
