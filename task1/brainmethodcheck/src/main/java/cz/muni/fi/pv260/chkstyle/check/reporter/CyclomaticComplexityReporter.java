@@ -201,7 +201,7 @@ public class CyclomaticComplexityReporter implements CheckReporter {
         final BigInteger bigIntegerMax = BigInteger.valueOf(max);
         if (currentValue.compareTo(bigIntegerMax) > 0) {
             checkReport = new CheckReport(false, this.getClass().getSimpleName(),
-                    String.format("Invalid cyclomatic complexity for maximum: %d (current was %d)", max, currentValue));
+                    String.format("Invalid cyclomatic complexity %d (maximum is %d)", currentValue, max));
         }
         popValue();
     }

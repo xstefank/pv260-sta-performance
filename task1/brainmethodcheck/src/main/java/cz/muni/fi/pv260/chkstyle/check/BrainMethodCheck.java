@@ -114,17 +114,17 @@ public class BrainMethodCheck extends AbstractCheck {
 
     private void reportMethod(DetailAST ast) {
 
+        boolean allReportsFailed = reporters.stream().allMatch(reporter -> reporter.getCheckReport().failed());
 
-        List<String> failedChecks = reporters.stream().filter(r -> !r.getCheckReport().passed())
-                .map(r -> r.getCheckReport().toString()).collect(Collectors.toList());
-
-        if (!failedChecks.isEmpty()) {
+        if (allReportsFailed) {
             String methodName = ast.findFirstToken(TokenTypes.IDENT).getText();
 
-            StringBuilder reportStringBuilder = new StringBuilder();
-            reportStringBuilder.append(String.format("Method %s ", methodName));
+            List<String> failedChecks = reporters.stream().filter(r -> r.getCheckReport().failed())
+                    .map(r -> r.getCheckReport().toString()).collect(Collectors.toList());
 
-            reportStringBuilder.append(FAILED + " ").append(failedChecks.toString());
+            StringBuilder reportStringBuilder = new StringBuilder();
+            reportStringBuilder.append(String.format("Method %s is a brain method ", methodName))
+                    .append(failedChecks.toString());
 
             log(ast, reportStringBuilder.toString());
         }

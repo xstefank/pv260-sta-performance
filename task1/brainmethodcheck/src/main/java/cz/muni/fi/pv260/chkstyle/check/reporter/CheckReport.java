@@ -22,6 +22,10 @@ public class CheckReport {
         return passed;
     }
 
+    public boolean failed() {
+        return !passed;
+    }
+
     public void setPassed(boolean passed) {
         this.passed = passed;
     }

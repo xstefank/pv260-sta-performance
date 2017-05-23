@@ -7,6 +7,61 @@ import java.util.Random;
  */
 public class ExampleBrainMethodClass {
 
+    public void brainMethod(int p1, char p2) {
+        //params and vars
+        int v1, v2;
+        int v3;
+
+        //nesting and cyclomatic complexity
+        for (;;) {
+            while (true) {
+                do {
+                    break;
+                } while (true);
+                break;
+            }
+            break;
+        }
+
+        //too many SLOC
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+    }
+
+    public void notBrainMethod() {
+        System.out.println("Valid method");
+        int x = 1;
+        try {
+            if (x > 0) {
+                x++;
+            }
+        } catch (Exception e) {
+            --x;
+        }
+    }
+
+    // partial checks / reporters testing samples
+
     public void tooManyVarsDef() {
         int x = 5;
         int y = 4;
@@ -158,18 +213,6 @@ public class ExampleBrainMethodClass {
             }
         } catch (Exception e) {
             //noop
-        }
-    }
-
-    public void noBrainMethod() {
-        System.out.println("Valid method");
-        int x = 1;
-        try {
-            if (x > 0) {
-                x++;
-            }
-        } catch (Exception e) {
-            --x;
         }
     }
 }
