@@ -127,4 +127,19 @@ public class MethodLengthReporter implements CheckReporter {
     public void setCountEmpty(boolean countEmpty) {
         this.countEmpty = countEmpty;
     }
+
+    @Override
+    public void visitToken(CheckContext context) {
+
+    }
+
+    @Override
+    public void leaveToken(CheckContext context) {
+
+    }
+
+    @Override
+    public int[] getDefaultTokens() {
+        return new int[0];
+    }
 }

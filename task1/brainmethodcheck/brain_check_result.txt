@@ -1,8 +1,2 @@
 Starting audit...
-[INFO] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:10:5: [Method length repoter]: PASSED -  [BrainMethod]
-[ERROR] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:38:5: [Method length repoter]: FAILED - The method length is longer then maximum length: 32 > 30 [BrainMethod]
-[INFO] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:75:5: [Method length repoter]: PASSED -  [BrainMethod]
-[INFO] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:88:5: [Method length repoter]: PASSED -  [BrainMethod]
-[INFO] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:99:5: [Method length repoter]: PASSED -  [BrainMethod]
-[INFO] /home/mstefank/GIT/xstefank/pv260-sta-performance/task1/brainmethodcheck/src/main/java/cz/muni/fi/pv260/chkstyle/example/ExampleBrainMethodClass.java:118:5: [Method length repoter]: PASSED -  [BrainMethod]
 Audit done.

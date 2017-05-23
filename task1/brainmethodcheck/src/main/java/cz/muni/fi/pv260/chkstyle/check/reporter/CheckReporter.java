@@ -5,7 +5,7 @@ import com.puppycrawl.tools.checkstyle.api.DetailAST;
 /**
  * @author <a href="mailto:xstefank122@gmail.com">Martin Stefanko</a>
  */
-public interface CheckReporter {
+public interface CheckReporter extends CheckListener {
 
     CheckReport checkPassed(DetailAST ast);
 }
