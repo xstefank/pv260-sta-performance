@@ -8,6 +8,7 @@ import cz.muni.fi.pv260.chkstyle.check.reporter.CheckReport;
 import cz.muni.fi.pv260.chkstyle.check.reporter.CheckReporter;
 import cz.muni.fi.pv260.chkstyle.check.reporter.CyclomaticComplexityReporter;
 import cz.muni.fi.pv260.chkstyle.check.reporter.MethodLengthReporter;
+import cz.muni.fi.pv260.chkstyle.check.reporter.NestedDepthReporter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +38,8 @@ public class BrainMethodCheck extends AbstractCheck {
     private List<CheckReporter> initReporters() {
         return Arrays.asList(
                 new MethodLengthReporter(linesOfCode, false, getFileContents()),
-                new CyclomaticComplexityReporter(cyclomaticComplexity)
+                new CyclomaticComplexityReporter(cyclomaticComplexity),
+                new NestedDepthReporter(1)
         );
     }
 

@@ -72,67 +72,142 @@ public class ExampleBrainMethodClass {
         System.out.println("Code (at least)");
     }
 
-    public void tooManyConditionsMethod(){
+    public void tooManyConditionsMethod() {
         Random rand = new Random();
         int bound = 100;
         int x = rand.nextInt(bound);
-        if(x < bound){
-            if(x < bound/2){
-                if(x < bound/4){
+        if (x < bound) {
+            if (x < bound / 2) {
+                if (x < bound / 4) {
                     System.out.println("three nested conditions here");
                 }
             }
         }
     }
 
-    public void tooManyCyclesMethod(){
-        for(int i = 0; i< 10; i++){
-            for(int j = 0; j< 10; j++){
-                for(int k = 0; k< 10; k++){
-                    int x = i*j*k;
+    public void tooManyCyclesMethod() {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                for (int k = 0; k < 10; k++) {
+                    int x = i * j * k;
                     System.out.println("Result:" + x);
                 }
             }
         }
     }
 
-    public void tooManyTriesMethod() throws Exception{
-        try{
+    public void tooManyTriesMethod() throws Exception {
+        try {
             int x = 0;
-            try{
+            try {
                 int y = 10;
-                try{
-                    int z = y/x;
+                try {
+                    int z = y / x;
                     System.out.println("Result of division by zero is:" + z);
-                }catch(Exception e){
+                } catch (Exception e) {
                     throw new Exception(e);
                 }
-            }catch(Exception e){
+            } catch (Exception e) {
                 throw new Exception(e);
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new Exception(e);
         }
     }
 
-    public void tooComplexMethod(){
+    public void tooComplexMethod() {
         Random rand = new Random();
         int bound = 100;
         int x = rand.nextInt(bound);
-        if(x < bound){
-            if(x < bound/2){
-                if(x < bound/4){
+        if (x < bound) {
+            if (x < bound / 2) {
+                if (x < bound / 4) {
                     System.out.println("three nested conditions here");
-                    for(int i = 0; i< 10; i++){
-                        for(int j = 0; j< 10; j++){
-                            for(int k = 0; k< 10; k++){
-                                int y = i*j*k;
+                    for (int i = 0; i < 10; i++) {
+                        for (int j = 0; j < 10; j++) {
+                            for (int k = 0; k < 10; k++) {
+                                int y = i * j * k;
                                 System.out.println("Result:" + y);
                             }
                         }
                     }
                 }
             }
+        }
+    }
+
+    public void nesterFor() {
+        for (; ; ) {
+            for (; ; ) {
+                for (; ; ) {
+                    break;
+                }
+                break;
+            }
+            break;
+        }
+    }
+
+    public void nestedWhile() {
+        while (true) {
+            while (true) {
+                while (true) {
+                    break;
+                }
+                break;
+            }
+            break;
+        }
+    }
+
+    public void nestedDoWhile() {
+        do {
+            do {
+                do {
+                    break;
+                } while (true);
+                break;
+            } while (true);
+            break;
+        } while (true);
+    }
+
+    public void nestedIf() {
+        if (true) {
+            if (true) {
+                if (true) {
+
+                }
+            }
+        }
+    }
+
+    public void nestedSwitch() {
+        switch (0) {
+            default:
+                switch (0) {
+                    default:
+                        switch (0) {
+                            default:
+                                break;
+                        }
+                }
+        }
+    }
+
+    public void nestedTryCatch() {
+        try {
+            try {
+                try {
+
+                } catch (Exception e) {
+                    //noop
+                }
+            } catch (Exception e) {
+                //noop
+            }
+        } catch (Exception e) {
+            //noop
         }
     }
 }
