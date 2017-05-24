@@ -210,7 +210,6 @@
 1. He thought that I was familiar with code reviews
 1. He assigned the code review by a mistake
 1. I was supposed to pass the code review course, but the management forgot
-1. The rules are stated in a company documentation page
 
 ### Possible solutions
 1. Talk to the team leader, see if this is the regular drill and if he can tell how to do code reviews
@@ -222,6 +221,3 @@
 1. Talk to the team leader
     * They indeed forgot to prepare the course, I have to look it up on my own
     * There was no course, but team leader said the rules are written in the company documentation pages
-1. Loop through the company documentations to see if it is there
-    * There is a documentation, but it is a little too complex and will take time to study it thoroughly
-
