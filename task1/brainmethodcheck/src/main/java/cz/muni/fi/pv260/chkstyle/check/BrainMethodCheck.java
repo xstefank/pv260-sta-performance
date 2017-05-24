@@ -32,6 +32,7 @@ public class BrainMethodCheck extends AbstractCheck {
     private int linesOfCode;
     private int cyclomaticComplexity;
     private int nestingDepth;
+    private int maxVars;
 
     private List<CheckReporter> reporters;
 
@@ -42,7 +43,7 @@ public class BrainMethodCheck extends AbstractCheck {
                 new MethodLengthReporter(linesOfCode, false, getFileContents()),
                 new CyclomaticComplexityReporter(cyclomaticComplexity),
                 new NestedDepthReporter(nestingDepth),
-                new MethodMaxVariablesReporter(3)
+                new MethodMaxVariablesReporter(maxVars)
         );
     }
 
@@ -136,5 +137,9 @@ public class BrainMethodCheck extends AbstractCheck {
 
     public void setNestingDepth(int nestingDepth) {
         this.nestingDepth = nestingDepth;
+    }
+
+    public void setMaxVars(int maxVars) {
+        this.maxVars = maxVars;
     }
 }
