@@ -212,7 +212,7 @@
 1. Management does not encourage any kind of code review courses
 
 ### Possible solutions
-1. Talk to the team leader, see if this is the regular drill and if he can tell how to do code reviews
+1. Talk to the team leader
     * He tells me to look up for some reviewing conventions on the internet
     * He tells me to look at some other code review reports and follow the patterns
 1. Talk to the colleague
