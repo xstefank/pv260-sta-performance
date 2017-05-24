@@ -207,17 +207,17 @@
 
 ## 13. Problem
 ### Root causes
-1. The assigner did not ensure if I am familiar with code reviews
-1. The assigner did not check to whom he assigned the task
+1. The assigner did not ensure that I am familiar with code reviews
+1. The assigner did not check who is he assigning
 1. Management does not encourage any kind of code review courses
 
 ### Possible solutions
 1. Talk to the team leader
-    * He tells me to look up for some reviewing conventions on the internet
+    * He tells me to look up for some reviewing tutorials on the Internet
     * He tells me to look at some other code review reports and follow the patterns
 1. Talk to the colleague
     * He does not care and wants it done
     * He reassigns the task to someone else, but I need to get familiar with code reviews anyway
-1. Talk to the team leader
-    * I have to look it up on my own
-    * Team leader said the rules are written in the company documentation pages, the rules will take time to learn
+1. Ask management for the code review course as it can help other developers as well
+    * Management can refuse as developers should be already familiar with code reviews
+    * May be a waste of resources in case not many developers are interested
