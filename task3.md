@@ -207,17 +207,17 @@
 
 ## 13. Problem
 ### Root causes
-1. He thought that I was familiar with code reviews
-1. He assigned the code review by a mistake
-1. I was supposed to pass the code review course, but the management forgot
+1. The assigner did not ensure if I am familiar with code reviews
+1. The assigner did not check to whom he assigned the task
+1. Management does not encourage any kind of code review courses
 
 ### Possible solutions
 1. Talk to the team leader, see if this is the regular drill and if he can tell how to do code reviews
     * He tells me to look up for some reviewing conventions on the internet
     * He tells me to look at some other code review reports and follow the patterns
 1. Talk to the colleague
-    * He acts surprised about my low knowledge and tells me to look it up on the internet
-    * He sends me to talk to team leader
+    * He does not care and wants it done
+    * He reassigns the task to someone else, but I need to get familiar with code reviews anyway
 1. Talk to the team leader
-    * They indeed forgot to prepare the course, I have to look it up on my own
-    * There was no course, but team leader said the rules are written in the company documentation pages
+    * I have to look it up on my own
+    * Team leader said the rules are written in the company documentation pages, the rules will take time to learn
