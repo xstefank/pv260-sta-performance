@@ -90,10 +90,7 @@ public class BrainMethodCheck extends AbstractCheck {
 
     @Override
     public void visitToken(DetailAST ast) {
-
         reportersTokenMap.get(ast.getType()).forEach(r -> r.visitToken(ast));
-
-
     }
 
     @Override
@@ -113,7 +110,6 @@ public class BrainMethodCheck extends AbstractCheck {
     }
 
     private void reportMethod(DetailAST ast) {
-
         boolean allReportsFailed = reporters.stream().allMatch(reporter -> reporter.getCheckReport().failed());
 
         if (allReportsFailed) {
@@ -128,7 +124,6 @@ public class BrainMethodCheck extends AbstractCheck {
 
             log(ast, reportStringBuilder.toString());
         }
-
     }
 
     public void setLinesOfCode(int linesOfCode) {
@@ -141,10 +136,5 @@ public class BrainMethodCheck extends AbstractCheck {
 
     public void setNestingDepth(int nestingDepth) {
         this.nestingDepth = nestingDepth;
-    }
-
-    private void logFailed(DetailAST ast, CheckReport report) {
-        setSeverity(SeverityLevel.ERROR.toString());
-        log(ast, report.toString());
     }
 }
