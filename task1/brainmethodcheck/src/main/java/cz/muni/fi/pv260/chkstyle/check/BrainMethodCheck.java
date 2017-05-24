@@ -2,9 +2,7 @@ package cz.muni.fi.pv260.chkstyle.check;
 
 import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
-import com.puppycrawl.tools.checkstyle.api.SeverityLevel;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
-import cz.muni.fi.pv260.chkstyle.check.reporter.CheckReport;
 import cz.muni.fi.pv260.chkstyle.check.reporter.CheckReporter;
 import cz.muni.fi.pv260.chkstyle.check.reporter.CyclomaticComplexityReporter;
 import cz.muni.fi.pv260.chkstyle.check.reporter.MethodLengthReporter;
@@ -38,37 +36,13 @@ public class BrainMethodCheck extends AbstractCheck {
 
     private Map<Integer, List<CheckReporter>> reportersTokenMap;
 
-    private List<CheckReporter> initReporters() {
-        return Arrays.asList(
-                new MethodLengthReporter(linesOfCode, false, getFileContents()),
-                new CyclomaticComplexityReporter(cyclomaticComplexity),
-                new NestedDepthReporter(nestingDepth),
-                new MethodMaxVariablesReporter(maxVars)
-        );
-    }
-
-    private Map<Integer, List<CheckReporter>> createTokenMapping() {
-        Map<Integer, List<CheckReporter>> mapping = new HashMap<>();
-
-        reporters.forEach(reporter -> {
-            int[] defaultTokens = reporter.getDefaultTokens();
-            Arrays.stream(defaultTokens).forEach(token -> {
-                if (mapping.get(token) != null) {
-                    mapping.get(token).add(reporter);
-                } else {
-                    mapping.put(token, new ArrayList<>(Collections.singletonList(reporter)));
-                }
-            });
-        });
-        return mapping;
-    }
-
     @Override
     public void beginTree(DetailAST rootAST) {
         reporters = initReporters();
         reportersTokenMap = createTokenMapping();
     }
 
+    @Override
     public int[] getDefaultTokens() {
         return new int[]{
                 TokenTypes.CTOR_DEF,
@@ -106,8 +80,29 @@ public class BrainMethodCheck extends AbstractCheck {
 
     }
 
-    private void clearReports() {
-        reporters.forEach(CheckReporter::clearReport);
+    private List<CheckReporter> initReporters() {
+        return Arrays.asList(
+                new MethodLengthReporter(linesOfCode, false, getFileContents()),
+                new CyclomaticComplexityReporter(cyclomaticComplexity),
+                new NestedDepthReporter(nestingDepth),
+                new MethodMaxVariablesReporter(maxVars)
+        );
+    }
+
+    private Map<Integer, List<CheckReporter>> createTokenMapping() {
+        Map<Integer, List<CheckReporter>> mapping = new HashMap<>();
+
+        reporters.forEach(reporter -> {
+            int[] defaultTokens = reporter.getDefaultTokens();
+            Arrays.stream(defaultTokens).forEach(token -> {
+                if (mapping.get(token) != null) {
+                    mapping.get(token).add(reporter);
+                } else {
+                    mapping.put(token, new ArrayList<>(Collections.singletonList(reporter)));
+                }
+            });
+        });
+        return mapping;
     }
 
     private void reportMethod(DetailAST ast) {
@@ -115,16 +110,21 @@ public class BrainMethodCheck extends AbstractCheck {
 
         if (allReportsFailed) {
             String methodName = ast.findFirstToken(TokenTypes.IDENT).getText();
+            String reportString = createReportString(methodName);
 
-            List<String> failedChecks = reporters.stream().filter(r -> r.getCheckReport().failed())
-                    .map(r -> r.getCheckReport().toString()).collect(Collectors.toList());
-
-            StringBuilder reportStringBuilder = new StringBuilder();
-            reportStringBuilder.append(String.format("Method %s is a brain method ", methodName))
-                    .append(failedChecks.toString());
-
-            log(ast, reportStringBuilder.toString());
+            log(ast, reportString);
         }
+    }
+
+    private String createReportString(String methodName) {
+        List<String> failedChecks = reporters.stream().filter(r -> r.getCheckReport().failed())
+                .map(r -> r.getCheckReport().toString()).collect(Collectors.toList());
+
+        return String.format("Method %s is a brain method ", methodName) + failedChecks.toString();
+    }
+
+    private void clearReports() {
+        reporters.forEach(CheckReporter::clearReport);
     }
 
     public void setLinesOfCode(int linesOfCode) {
