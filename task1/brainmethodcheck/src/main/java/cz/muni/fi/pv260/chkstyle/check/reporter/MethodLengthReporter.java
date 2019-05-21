@@ -22,7 +22,6 @@ package cz.muni.fi.pv260.chkstyle.check.reporter;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.FileContents;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
-import com.puppycrawl.tools.checkstyle.utils.CommonUtils;
 
 /**
  * <p>
@@ -86,7 +85,7 @@ public class MethodLengthReporter extends AbstractCheckReporter {
     }
 
     public int[] getRequiredTokens() {
-        return CommonUtils.EMPTY_INT_ARRAY;
+        return new int[0];
     }
 
     @Override

@@ -64,6 +64,16 @@ public class BrainMethodCheck extends AbstractCheck {
     }
 
     @Override
+    public int[] getAcceptableTokens() {
+        return new int[0];
+    }
+
+    @Override
+    public int[] getRequiredTokens() {
+        return new int[0];
+    }
+
+    @Override
     public void visitToken(DetailAST ast) {
         reportersTokenMap.get(ast.getType()).forEach(r -> r.visitToken(ast));
     }
